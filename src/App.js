@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./sections/Home/Home.tsx";
 import About from "./sections/About/About.tsx";
 import Projects from "./sections/Projects/Projects.tsx";
+import Resume from "./sections/Resume/Resume.tsx";
 
 function App() {
     const theme = createTheme({
@@ -22,6 +23,7 @@ function App() {
                 <Home />
                 <About />
                 <Projects />
+                <Resume />
             </div>
         </MantineProvider>
     );
