@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { MantineProvider, createTheme, rem } from "@mantine/core";
+import "./App.css";
+import Home from "./sections/Home/Home.tsx";
+import About from "./sections/About/About.tsx";
+import Projects from "./sections/Projects/Projects.tsx";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const theme = createTheme({
+        fontFamily: "Inter, sans-serif",
+        fontSizes: {
+            xs: "10px",
+            md: "12px",
+            lg: "15px",
+        },
+        white: "#E8F7FE",
+        black: "#534F46",
+    });
+
+    return (
+        <MantineProvider theme={theme}>
+            <div className="main">
+                <Home />
+                <About />
+                <Projects />
+            </div>
+        </MantineProvider>
+    );
 }
 
 export default App;

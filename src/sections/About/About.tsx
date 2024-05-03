@@ -1,4 +1,4 @@
-import { Container, Flex, Grid, Text } from "@mantine/core";
+import { Box, Container, Flex, Grid, Text } from "@mantine/core";
 import "@mantine/core/styles.css";
 
 import React from "react";
@@ -12,21 +12,22 @@ export default function About() {
             gutter={gutter}
             columns={8}
             w="100%"
+            h="100vh"
             style={{
                 backgroundColor: "var(--mantine-color-black)",
                 color: "var(--mantine-color-white)",
             }}
             p="20px 70px 20px 70px"
         >
-            <Grid.Col
-                span={8}
-                style={{
-                    borderBottom: "1px solid var(--mantine-color-white)",
-                }}
-                p={0}
-                mt="5vh"
-            ></Grid.Col>
-            <Grid.Col span={3} p="0" mt="50px">
+            <Grid.Col span={8} mt="5vh">
+                <Box
+                    style={{
+                        borderBottom: "1px solid var(--mantine-color-white)",
+                    }}
+                    w="100%"
+                ></Box>
+            </Grid.Col>
+            <Grid.Col span={3} mt="50px">
                 <Text>01</Text>
                 <Text
                     style={{
@@ -64,12 +65,8 @@ export default function About() {
                         mt="20px"
                         pb={"5px"}
                     ></Grid.Col>
-                    <Grid.Col span={3} p={0}>
-                        based in toronto
-                    </Grid.Col>
-                    <Grid.Col span={3} p={0}>
-                        from malaysia
-                    </Grid.Col>
+                    <Grid.Col span={3}>based in toronto</Grid.Col>
+                    <Grid.Col span={3}>from malaysia</Grid.Col>
                 </Grid>
             </Grid.Col>
             <Grid.Col span={5} m="5vh 0 5vh 0" h="80vh" pos={"relative"}>
@@ -81,14 +78,14 @@ export default function About() {
                     h="100%"
                 ></Flex>
             </Grid.Col>
-            <Grid.Col
-                span={8}
-                style={{
-                    borderBottom: "1px solid var(--mantine-color-white)",
-                }}
-                p="0"
-                mb="5vh"
-            ></Grid.Col>
+            <Grid.Col span={8} mb="5vh">
+                <Box
+                    style={{
+                        borderBottom: "1px solid var(--mantine-color-white)",
+                    }}
+                    w="100%"
+                ></Box>
+            </Grid.Col>
         </Grid>
     );
 }
