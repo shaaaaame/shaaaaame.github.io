@@ -10,7 +10,7 @@ export default function Home() {
         base: "20px",
     };
     return (
-        <Grid gutter={gutter} columns={8} h="100vh" m="20px 70px 20px 70px">
+        <Grid gutter={gutter} columns={8} m="20px 70px 20px 70px">
             <Grid.Col span={8} mt="5vh">
                 <Box
                     style={{
