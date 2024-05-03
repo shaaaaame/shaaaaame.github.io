@@ -1,0 +1,7 @@
+.box {
+    top: -1px;
+    position: relative;
+    width: 10%;
+    height: 10%;
+    background-color: var(--mantine-color-black);
+}
