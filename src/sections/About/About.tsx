@@ -3,6 +3,8 @@ import "@mantine/core/styles.css";
 
 import React from "react";
 
+const AboutHeader = () => {};
+
 export default function About() {
     const gutter = {
         base: "20px",
@@ -12,20 +14,45 @@ export default function About() {
             gutter={gutter}
             columns={8}
             w="100%"
-            h="100vh"
+            h="150vh"
             style={{
-                backgroundColor: "var(--mantine-color-black)",
                 color: "var(--mantine-color-white)",
             }}
             p="20px 70px 20px 70px"
+            m="30vh 0 25vh 0"
         >
-            <Grid.Col span={8} mt="5vh">
-                <Box
+            <Grid.Col span={8}>
+                <Grid
+                    gutter={gutter}
                     style={{
                         borderBottom: "1px solid var(--mantine-color-white)",
+                        paddingBottom: "5px",
                     }}
-                    w="100%"
-                ></Box>
+                    columns={8}
+                >
+                    <Grid.Col span={6}>
+                        <Flex gap={"10px"}>
+                            <Box
+                                w="1em"
+                                h="1em"
+                                style={{
+                                    aspectRatio: 1,
+                                    backgroundColor:
+                                        "var(--mantine-color-white)",
+                                }}
+                            ></Box>
+                            <Text style={{ lineHeight: "1em" }}>
+                                HAN XHENG CHEW
+                            </Text>
+                        </Flex>
+                    </Grid.Col>
+                    <Grid.Col span={1} style={{ lineHeight: "1em" }}>
+                        portfolio
+                    </Grid.Col>
+                    <Grid.Col span={1} style={{ lineHeight: "1em" }}>
+                        2024
+                    </Grid.Col>
+                </Grid>
             </Grid.Col>
             <Grid.Col span={3} mt="50px">
                 <Text>01</Text>
@@ -37,36 +64,43 @@ export default function About() {
                 >
                     ABOUT
                 </Text>
+                <Box
+                    w="100%"
+                    style={{
+                        borderTop: "1px solid var(--mantine-color-white)",
+                    }}
+                ></Box>
                 <Grid w="100%" columns={3} mt="20vh" pr="10px">
-                    <Grid.Col
-                        span={3}
-                        style={{
-                            borderTop: "1px solid var(--mantine-color-white)",
-                        }}
-                        pb={"5px"}
-                    ></Grid.Col>
-                    <Grid.Col span={2} p={0}>
-                        computer science student
+                    <Grid.Col span={3}>
+                        <Box
+                            style={{
+                                borderTop:
+                                    "1px solid var(--mantine-color-white)",
+                            }}
+                            w="100%"
+                        ></Box>
                     </Grid.Col>
-                    <Grid.Col span={1} p={0}>
-                        university of toronto
+                    <Grid.Col span={2}>
+                        <Text>computer science student</Text>
+                        <Text>frontend developer</Text>
                     </Grid.Col>
-                    <Grid.Col span={2} p={0}>
-                        frontend developer
+                    <Grid.Col span={1}>
+                        <Text>university of toronto</Text>
+                        <Text>'2026</Text>
                     </Grid.Col>
-                    <Grid.Col span={1} p={0}>
-                        '2026
+                    <Grid.Col span={3}>
+                        <Box
+                            style={{
+                                borderTop:
+                                    "1px solid var(--mantine-color-white)",
+                            }}
+                            w="100%"
+                        ></Box>
                     </Grid.Col>
-                    <Grid.Col
-                        span={3}
-                        style={{
-                            borderTop: "1px solid var(--mantine-color-white)",
-                        }}
-                        mt="20px"
-                        pb={"5px"}
-                    ></Grid.Col>
-                    <Grid.Col span={3}>based in toronto</Grid.Col>
-                    <Grid.Col span={3}>from malaysia</Grid.Col>
+                    <Grid.Col span={3}>
+                        <Text>based in toronto</Text>
+                        <Text>from malaysia</Text>
+                    </Grid.Col>
                 </Grid>
             </Grid.Col>
             <Grid.Col span={5} m="5vh 0 5vh 0" h="80vh" pos={"relative"}>

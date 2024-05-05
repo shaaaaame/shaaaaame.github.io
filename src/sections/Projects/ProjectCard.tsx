@@ -1,7 +1,8 @@
 import { Box, Flex, Grid, Image, Text } from "@mantine/core";
-import { space } from "postcss/lib/list";
-import React from "react";
+import React, { useRef } from "react";
 import { GitHub, Globe } from "react-feather";
+import { useScroll, motion, MotionValue } from "framer-motion";
+import useParallax from "../utilities/useParallax.tsx";
 
 function ProjectTag({ name }) {
     return (
@@ -21,8 +22,12 @@ function ProjectTag({ name }) {
 }
 
 function ProjectCard({ title, details, tags, links, src }) {
+    const ref = useRef(null);
+    const { scrollYProgress } = useScroll({ target: ref });
+    const y = useParallax(scrollYProgress, -200, 0);
+
     return (
-        <Grid columns={8}>
+        <Grid columns={8} ref={ref}>
             <Grid.Col span={4}>
                 <Flex align={"flex-start"} gap={"20px"}>
                     <Box
@@ -30,6 +35,7 @@ function ProjectCard({ title, details, tags, links, src }) {
                         h="50px"
                         style={{
                             backgroundColor: "var(--mantine-color-black)",
+                            aspectRatio: 1,
                         }}
                     ></Box>
                     <Text style={{ fontSize: "50px", lineHeight: "50px" }}>
@@ -79,17 +85,26 @@ function ProjectCard({ title, details, tags, links, src }) {
             <Grid.Col span={8}>
                 <Flex gap={"20px"}>
                     {tags.map((e) => (
-                        <ProjectTag name={e} />
+                        <ProjectTag key={e} name={e} />
                     ))}
                 </Flex>
             </Grid.Col>
-            <Grid.Col span={8}>
-                <Image
-                    src={src}
-                    alt={title}
-                    h={"50vh"}
-                    style={{ border: "1px solid var(--mantine-color-black)" }}
-                />
+            <Grid.Col span={8} h={"50vh"}>
+                <Box
+                    style={{
+                        border: "1px solid var(--mantine-color-black)",
+                        overflow: "hidden",
+                    }}
+                    h="100%"
+                >
+                    <motion.div
+                        style={{
+                            y: y,
+                        }}
+                    >
+                        <Image src={src} alt={title} h={"80vh"} />
+                    </motion.div>
+                </Box>
             </Grid.Col>
         </Grid>
     );

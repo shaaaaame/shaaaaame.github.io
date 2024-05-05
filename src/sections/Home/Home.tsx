@@ -1,82 +1,96 @@
-import {
-    Divider,
-    Grid,
-    Title,
-    Container,
-    Flex,
-    Text,
-    Box,
-} from "@mantine/core";
+import { Grid, Flex, Text, Box } from "@mantine/core";
 import "@mantine/core/styles.css";
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
 import "./Home.css";
 import NavSection from "./NavSection.tsx";
+import AnimatedTitle from "../components/AnimatedTitle.tsx";
+import { motion, useInView } from "framer-motion";
+import Header from "../components/Header.tsx";
 
-export default function Home() {
+export default function Home({ about, projects, resume, contact }) {
     const gutter = {
         base: "20px",
     };
+
     return (
-        <Grid
-            gutter={gutter}
-            columns={8}
-            w="100%"
-            h="100vh"
-            p="20px 70px 20px 70px"
+        <div
+            style={{
+                display: "flex",
+                height: "100vh",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                padding: "20px 70px 20px 70px",
+            }}
         >
-            <Grid.Col span={8}>
-                <Grid
-                    gutter={gutter}
-                    style={{
-                        borderBottom: "1px solid #534F46",
-                        paddingBottom: "5px",
-                    }}
-                    columns={8}
+            <Grid gutter={gutter} columns={8} w="100%">
+                <Grid.Col span={8}>
+                    <Header />
+                </Grid.Col>
+                <Grid.Col span={8}>
+                    <Text ml="-12px">
+                        <AnimatedTitle
+                            title={"HAN XHENG"}
+                            fontSize={"150px"}
+                            lineHeight={"175px"}
+                            delay={0}
+                        />
+                    </Text>
+                </Grid.Col>
+                <Grid.Col span={6}>
+                    <Text ml="-12px">
+                        <AnimatedTitle
+                            title={"CHEW"}
+                            fontSize={"150px"}
+                            lineHeight={"175px"}
+                            delay={0.2}
+                        />
+                    </Text>
+                </Grid.Col>
+                <Grid.Col span={2} mt="50px">
+                    <p>(building great software</p>
+                    <p>with great people.)</p>
+                </Grid.Col>
+            </Grid>
+            <Grid columns={8} gutter={gutter} w="100%">
+                <Grid.Col
+                    span={2}
+                    onClick={() =>
+                        about.current.scrollIntoView({ behavior: "smooth" })
+                    }
                 >
-                    <Grid.Col span={6}>HAN XHENG CHEW</Grid.Col>
-                    <Grid.Col span={1}>portfolio</Grid.Col>
-                    <Grid.Col span={1}>2024</Grid.Col>
-                </Grid>
-            </Grid.Col>
-            <Grid.Col span={8}>
-                <Text
-                    style={{
-                        fontSize: "150px",
-                        lineHeight: "175px",
-                    }}
-                    ml="-12px"
+                    <NavSection numberString={"01"} name="about" />
+                </Grid.Col>
+                <Grid.Col
+                    span={2}
+                    onClick={() =>
+                        projects.current.scrollIntoView({
+                            behavior: "smooth",
+                        })
+                    }
                 >
-                    HAN XHENG
-                </Text>
-            </Grid.Col>
-            <Grid.Col span={6}>
-                <Text
-                    style={{
-                        fontSize: "150px",
-                        lineHeight: "175px",
-                    }}
-                    ml="-12px"
+                    <NavSection numberString={"02"} name="projects" />
+                </Grid.Col>
+                <Grid.Col
+                    span={2}
+                    onClick={() =>
+                        resume.current.scrollIntoView({
+                            behavior: "smooth",
+                        })
+                    }
                 >
-                    CHEW
-                </Text>
-            </Grid.Col>
-            <Grid.Col span={2} mt="50px">
-                <p>(building great software</p>
-                <p>with great people.)</p>
-            </Grid.Col>
-            <Grid.Col span={2}>
-                <NavSection numberString={"01"} name="about" />
-            </Grid.Col>
-            <Grid.Col span={2}>
-                <NavSection numberString={"02"} name="projects" />
-            </Grid.Col>
-            <Grid.Col span={2}>
-                <NavSection numberString={"03"} name="resume" />
-            </Grid.Col>
-            <Grid.Col span={2}>
-                <NavSection numberString={"04"} name="contact" />
-            </Grid.Col>
-        </Grid>
+                    <NavSection numberString={"03"} name="resume" />
+                </Grid.Col>
+                <Grid.Col
+                    span={2}
+                    onClick={() =>
+                        contact.current.scrollIntoView({
+                            behavior: "smooth",
+                        })
+                    }
+                >
+                    <NavSection numberString={"04"} name="contact" />
+                </Grid.Col>
+            </Grid>
+        </div>
     );
 }

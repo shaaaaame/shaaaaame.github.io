@@ -18,13 +18,38 @@ export default function Resume() {
             }}
             p="20px 70px 20px 70px"
         >
-            <Grid.Col span={8} mt="5vh">
-                <Box
+            <Grid.Col span={8}>
+                <Grid
+                    gutter={gutter}
                     style={{
                         borderBottom: "1px solid var(--mantine-color-white)",
+                        paddingBottom: "5px",
                     }}
-                    w="100%"
-                ></Box>
+                    columns={8}
+                >
+                    <Grid.Col span={6}>
+                        <Flex gap={"10px"}>
+                            <Box
+                                w="1em"
+                                h="1em"
+                                style={{
+                                    aspectRatio: 1,
+                                    backgroundColor:
+                                        "var(--mantine-color-white)",
+                                }}
+                            ></Box>
+                            <Text style={{ lineHeight: "1em" }}>
+                                HAN XHENG CHEW
+                            </Text>
+                        </Flex>
+                    </Grid.Col>
+                    <Grid.Col span={1} style={{ lineHeight: "1em" }}>
+                        portfolio
+                    </Grid.Col>
+                    <Grid.Col span={1} style={{ lineHeight: "1em" }}>
+                        2024
+                    </Grid.Col>
+                </Grid>
             </Grid.Col>
             <Grid.Col span={8}>
                 <Text>03</Text>
@@ -33,6 +58,7 @@ export default function Resume() {
                         fontSize: "100px",
                         lineHeight: "100px",
                     }}
+                    ml="-8px"
                 >
                     RESUME
                 </Text>
