@@ -1,6 +1,7 @@
 import React from "react";
 import { Flex, Box, Text, Grid, Image } from "@mantine/core";
 import { GitHub, Globe } from "react-feather";
+import AnimatedTitle from "../components/AnimatedTitle.tsx";
 
 function ProjectTag({ name }) {
     return (
@@ -104,7 +105,12 @@ function ProjectsMobile() {
                 style={{ borderBottom: "1px solid var(--mantine-color-black)" }}
             >
                 <Text>03</Text>
-                <Text style={{ fontSize: "50px" }}>PROJECTS</Text>
+                <AnimatedTitle
+                    fontSize={"50px"}
+                    lineHeight={"50px"}
+                    delay={0}
+                    title={"PROJECTS"}
+                />
             </Box>
             <ProjectMobileCard
                 title="GLAM DE FLEURS"

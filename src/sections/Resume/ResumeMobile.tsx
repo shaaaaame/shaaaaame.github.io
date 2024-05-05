@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex, Box, Text, Grid } from "@mantine/core";
-
+import AnimatedTitle from "../components/AnimatedTitle.tsx";
 function ResumeMobile() {
     return (
         <Flex
@@ -16,7 +16,12 @@ function ResumeMobile() {
         >
             <Box>
                 <Text>03</Text>
-                <Text style={{ fontSize: "50px" }}>RESUME</Text>
+                <AnimatedTitle
+                    fontSize={"50px"}
+                    lineHeight={"50px"}
+                    delay={0}
+                    title={"RESUME"}
+                />{" "}
             </Box>
             <Box
                 w="100%"

@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Box, Text, Grid, Image, Anchor } from "@mantine/core";
+import AnimatedTitle from "../components/AnimatedTitle.tsx";
 
 function ContactMobile() {
     return (
@@ -19,7 +20,12 @@ function ContactMobile() {
                 style={{ borderBottom: "1px solid var(--mantine-color-black)" }}
             >
                 <Text>04</Text>
-                <Text style={{ fontSize: "50px" }}>CONTACT</Text>
+                <AnimatedTitle
+                    fontSize={"50px"}
+                    lineHeight={"50px"}
+                    delay={0}
+                    title={"CONTACT"}
+                />
             </Box>
             <Flex direction={"column"} gap={"20px"}>
                 <Grid
