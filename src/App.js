@@ -6,9 +6,13 @@ import Projects from "./sections/Projects/Projects.tsx";
 import Resume from "./sections/Resume/Resume.tsx";
 import Contact from "./sections/Contact/Contact.tsx";
 import { useRef } from "react";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import AboutTransition from "./sections/About/AboutTransition.tsx";
-
+import HomeMobile from "./sections/Home/HomeMobile.tsx";
+import { useMediaQuery } from "@mantine/hooks";
+import AboutMobile from "./sections/About/AboutMobile.tsx";
+import ProjectsMobile from "./sections/Projects/ProjectsMobile.tsx";
+import ResumeMobile from "./sections/Resume/ResumeMobile.tsx";
+import ContactMobile from "./sections/Contact/ContactMobile.tsx";
 function App() {
     const theme = createTheme({
         fontFamily: "Inter, sans-serif",
@@ -21,38 +25,66 @@ function App() {
         black: "#534F46",
     });
 
+    const isMobile = useMediaQuery("(max-width: 780px)");
+
     const home = useRef(null);
     const about = useRef(null);
     const projects = useRef(null);
     const resume = useRef(null);
     const contact = useRef(null);
 
+    const sticky = isMobile
+        ? {
+              position: "sticky",
+              top: "0",
+          }
+        : {};
+
     return (
         <MantineProvider theme={theme}>
             <div className="main">
-                <div ref={home} style={{ zIndex: 100 }}>
-                    <Home
-                        about={about}
-                        projects={projects}
-                        resume={resume}
-                        contact={contact}
-                    />
+                <div ref={home} style={{ zIndex: 100, ...sticky }}>
+                    {isMobile ? (
+                        <HomeMobile
+                            about={about}
+                            projects={projects}
+                            resume={resume}
+                            contact={contact}
+                        />
+                    ) : (
+                        <Home
+                            about={about}
+                            projects={projects}
+                            resume={resume}
+                            contact={contact}
+                        />
+                    )}
                 </div>
-                <div style={{ zIndex: 101, position: "relative" }}>
-                    <AboutTransition />
-                </div>
+                {!isMobile && (
+                    <div style={{ zIndex: 101, position: "relative" }}>
+                        <AboutTransition />
+                    </div>
+                )}
+
                 <div
                     ref={about}
                     style={{
                         zIndex: 102,
                         position: "relative",
+                        ...sticky,
                     }}
                 >
-                    <About />
+                    {isMobile ? <AboutMobile /> : <About />}
                 </div>
 
-                <div ref={projects}>
-                    <Projects />
+                <div
+                    ref={projects}
+                    style={{
+                        zIndex: 103,
+                        position: "relative",
+                    }}
+                >
+                    {isMobile ? <ProjectsMobile /> : <Projects />}
                 </div>
                 <div
                     ref={resume}
@@ -62,17 +94,16 @@ function App() {
                         zIndex: 104,
                     }}
                 >
-                    <Resume />
+                    {isMobile ? <ResumeMobile /> : <Resume />}
                 </div>
                 <div
                     ref={contact}
                     style={{
                         zIndex: 105,
                         position: "relative",
-                        borderTop: "1px solid var(--mantine-color-black)",
                     }}
                 >
-                    <Contact />
+                    {isMobile ? <ContactMobile /> : <Contact />}
                 </div>
             </div>
         </MantineProvider>

@@ -7,11 +7,9 @@ function AnimatedTitle({ title, fontSize, lineHeight, delay }) {
     const variants = {
         hidden: {
             y: lineHeight,
-            rotateY: 90,
         },
         visible: {
             y: 0,
-            rotateY: 0,
         },
     };
     let duration = 0.2;

@@ -1,7 +1,6 @@
 import "@mantine/core/styles.css";
 import { Grid, Text, Box, Flex } from "@mantine/core";
 import React from "react";
-import { motion } from "framer-motion";
 import "./Projects.css";
 import ProjectCard from "./ProjectCard.tsx";
 import ProjectsHeader from "../components/ProjectsHeader.tsx";

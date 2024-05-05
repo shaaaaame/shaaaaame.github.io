@@ -18,6 +18,7 @@ export default function Resume() {
                 color: "var(--mantine-color-white)",
             }}
             p="20px 70px 20px 70px"
+            mb="30vh"
         >
             <Grid.Col span={8}>
                 <Grid

@@ -3,6 +3,7 @@ import React from "react";
 import { Grid, Flex, Box, Text } from "@mantine/core";
 import { useInView, motion } from "framer-motion";
 
+import { useMediaQuery } from "@mantine/hooks";
 const gutter = {
     base: "20px",
 };
@@ -10,9 +11,11 @@ const gutter = {
 function Header() {
     const ref = React.useRef(null);
     const isInView = useInView(ref, { amount: "all" });
+    const isMobile = useMediaQuery("(max-width: 780px)");
+
     return (
-        <Grid gutter={gutter} columns={8} ref={ref}>
-            <Grid.Col span={6}>
+        <Grid gutter={gutter} columns={isMobile ? 4 : 8} ref={ref}>
+            <Grid.Col span={isMobile ? 2 : 3}>
                 <Flex gap={"10px"}>
                     <Box
                         w="1em"
@@ -31,7 +34,7 @@ function Header() {
             <Grid.Col span={1} style={{ lineHeight: "1em" }}>
                 2024
             </Grid.Col>
-            <Grid.Col span={8} pb={0}>
+            <Grid.Col span={isMobile ? 4 : 8} pb={0}>
                 <motion.div
                     style={{
                         borderBottom: "1px solid var(--mantine-color-black)",
