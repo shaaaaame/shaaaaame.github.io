@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Grid, Text, Box, Flex } from "@mantine/core";
 import Header from "../components/Header.tsx";
 import AnimatedTitle from "../components/AnimatedTitle.tsx";
-import { motion, useInView } from "framer-motion";
+import { color, motion, useInView } from "framer-motion";
 
 function Contact() {
     const ref = useRef(null);
@@ -107,7 +107,14 @@ function Contact() {
                         }}
                     >
                         <Grid.Col span={1}>EMAIL</Grid.Col>
-                        <Grid.Col span={1}>hanxheng@gmail.com</Grid.Col>
+                        <Grid.Col span={1}>
+                            <a
+                                href="mailto:hanxheng@gmail.com"
+                                style={{ color: "var(--mantine-color-black)" }}
+                            >
+                                hanxheng@gmail.com
+                            </a>
+                        </Grid.Col>
                     </Grid>
                     <Grid
                         columns={2}
@@ -129,7 +136,14 @@ function Contact() {
                         }}
                     >
                         <Grid.Col span={1}>LINKEDIN</Grid.Col>
-                        <Grid.Col span={1}>hanxheng</Grid.Col>
+                        <Grid.Col span={1}>
+                            <a
+                                href="https://www.linkedin.com/in/hanxheng/"
+                                style={{ color: "var(--mantine-color-black)" }}
+                            >
+                                hanxheng
+                            </a>
+                        </Grid.Col>
                     </Grid>
                     <Grid
                         columns={2}
@@ -140,7 +154,14 @@ function Contact() {
                         }}
                     >
                         <Grid.Col span={1}>GITHUB</Grid.Col>
-                        <Grid.Col span={1}>shaaaaaaaame</Grid.Col>
+                        <Grid.Col span={1}>
+                            <a
+                                href="https://github.com/shaaaaame"
+                                style={{ color: "var(--mantine-color-black)" }}
+                            >
+                                shaaaaame
+                            </a>
+                        </Grid.Col>
                     </Grid>
                 </Flex>
             </Grid.Col>
