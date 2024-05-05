@@ -71,35 +71,11 @@ function Contact() {
             <Grid.Col span={2} mt="50px">
                 <Text>(let's build something great.)</Text>
             </Grid.Col>
-            <Grid.Col span={6} ref={ref}>
-                <motion.div
-                    animate={isInView ? "visible" : "hidden"}
-                    variants={{
-                        hidden: {
-                            width: 0,
-                        },
-
-                        visible: {
-                            width: "100%",
-                        },
-                    }}
-                    transition={{
-                        ease: "easeInOut",
-                        duration: ".5",
-                    }}
-                    style={{
-                        backgroundColor: "var(--mantine-color-black)",
-                        height: "100%",
-                        position: "relative",
-                        left: "0",
-                        top: 0,
-                    }}
-                ></motion.div>
-            </Grid.Col>
-            <Grid.Col span={2}>
+            <Grid.Col span={5}></Grid.Col>
+            <Grid.Col span={3}>
                 <Flex direction={"column"}>
                     <Grid
-                        columns={2}
+                        columns={3}
                         gutter={gutter}
                         pb={"10px"}
                         style={{
@@ -107,7 +83,7 @@ function Contact() {
                         }}
                     >
                         <Grid.Col span={1}>EMAIL</Grid.Col>
-                        <Grid.Col span={1}>
+                        <Grid.Col span={2}>
                             <a
                                 href="mailto:hanxheng@gmail.com"
                                 style={{ color: "var(--mantine-color-black)" }}
@@ -117,7 +93,7 @@ function Contact() {
                         </Grid.Col>
                     </Grid>
                     <Grid
-                        columns={2}
+                        columns={3}
                         gutter={gutter}
                         pb={"10px"}
                         style={{
@@ -125,10 +101,10 @@ function Contact() {
                         }}
                     >
                         <Grid.Col span={1}>PHONE</Grid.Col>
-                        <Grid.Col span={1}>+1 416 768 8441</Grid.Col>
+                        <Grid.Col span={2}>+1 416 768 8441</Grid.Col>
                     </Grid>
                     <Grid
-                        columns={2}
+                        columns={3}
                         gutter={gutter}
                         pb={"10px"}
                         style={{
@@ -136,7 +112,7 @@ function Contact() {
                         }}
                     >
                         <Grid.Col span={1}>LINKEDIN</Grid.Col>
-                        <Grid.Col span={1}>
+                        <Grid.Col span={2}>
                             <a
                                 href="https://www.linkedin.com/in/hanxheng/"
                                 style={{ color: "var(--mantine-color-black)" }}
@@ -146,7 +122,7 @@ function Contact() {
                         </Grid.Col>
                     </Grid>
                     <Grid
-                        columns={2}
+                        columns={3}
                         gutter={gutter}
                         pb={"10px"}
                         style={{
@@ -154,7 +130,7 @@ function Contact() {
                         }}
                     >
                         <Grid.Col span={1}>GITHUB</Grid.Col>
-                        <Grid.Col span={1}>
+                        <Grid.Col span={2}>
                             <a
                                 href="https://github.com/shaaaaame"
                                 style={{ color: "var(--mantine-color-black)" }}

@@ -11,14 +11,7 @@ function Header() {
     const ref = React.useRef(null);
     const isInView = useInView(ref, { amount: "all" });
     return (
-        <Grid
-            gutter={gutter}
-            style={{
-                paddingBottom: "5px",
-            }}
-            columns={8}
-            ref={ref}
-        >
+        <Grid gutter={gutter} columns={8} ref={ref}>
             <Grid.Col span={6}>
                 <Flex gap={"10px"}>
                     <Box
@@ -38,7 +31,7 @@ function Header() {
             <Grid.Col span={1} style={{ lineHeight: "1em" }}>
                 2024
             </Grid.Col>
-            <Grid.Col span={8}>
+            <Grid.Col span={8} pb={0}>
                 <motion.div
                     style={{
                         borderBottom: "1px solid var(--mantine-color-black)",

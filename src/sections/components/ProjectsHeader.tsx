@@ -23,12 +23,7 @@ export default function ProjectsHeader() {
             <Grid.Col span={8}>
                 <Header />
             </Grid.Col>
-            <Grid.Col
-                span={8}
-                style={{ textAlign: "right" }}
-                pt="20px"
-                pb="20px"
-            >
+            <Grid.Col span={8} style={{ textAlign: "right" }} pb="20px">
                 <Text>02</Text>
                 <AnimatedTitle
                     title={"PROJECTS"}

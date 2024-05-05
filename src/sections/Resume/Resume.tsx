@@ -1,7 +1,8 @@
-import { Box, Container, Flex, Grid, Text } from "@mantine/core";
+import { Box, Flex, Grid, Text } from "@mantine/core";
 import "@mantine/core/styles.css";
 
 import React from "react";
+import AnimatedTitle from "../components/AnimatedTitle.tsx";
 
 export default function Resume() {
     const gutter = {
@@ -53,15 +54,12 @@ export default function Resume() {
             </Grid.Col>
             <Grid.Col span={8}>
                 <Text>03</Text>
-                <Text
-                    style={{
-                        fontSize: "100px",
-                        lineHeight: "100px",
-                    }}
-                    ml="-8px"
-                >
-                    RESUME
-                </Text>
+                <AnimatedTitle
+                    title={"RESUME"}
+                    fontSize={"100px"}
+                    lineHeight={"100px"}
+                    delay={0}
+                />
             </Grid.Col>
             <Grid.Col span={5} h={"70vh"}>
                 <iframe
