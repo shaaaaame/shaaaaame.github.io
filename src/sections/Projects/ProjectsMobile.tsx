@@ -60,7 +60,10 @@ const ProjectMobileCard = ({ title, details, tags, links, src }) => {
                 <Grid.Col span={3}>{details.stack}</Grid.Col>
                 <Grid.Col span={1}>
                     {links.web ? (
-                        <a href={links.web}>
+                        <a
+                            href={links.web}
+                            aria-label={`Link to ${title} page`}
+                        >
                             <Globe
                                 style={{
                                     textDecoration: "none",
@@ -72,7 +75,10 @@ const ProjectMobileCard = ({ title, details, tags, links, src }) => {
                         ""
                     )}
                     {links.github ? (
-                        <a href={links.github}>
+                        <a
+                            href={links.github}
+                            aria-label={`Link to ${title} GitHub`}
+                        >
                             <GitHub
                                 style={{
                                     textDecoration: "none",
