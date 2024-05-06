@@ -25,7 +25,7 @@ function App() {
         black: "#534F46",
     });
 
-    const isMobile = useMediaQuery("(max-width: 780px)");
+    const isMobile = useMediaQuery("(max-width: 1020px)");
 
     const home = useRef(null);
     const about = useRef(null);

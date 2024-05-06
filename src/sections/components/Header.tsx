@@ -11,7 +11,7 @@ const gutter = {
 function Header() {
     const ref = React.useRef(null);
     const isInView = useInView(ref, { amount: "all" });
-    const isMobile = useMediaQuery("(max-width: 780px)");
+    const isMobile = useMediaQuery("(max-width: 1020px)");
 
     return (
         <Grid gutter={gutter} columns={isMobile ? 4 : 8} ref={ref}>
