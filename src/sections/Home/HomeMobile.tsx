@@ -8,7 +8,7 @@ function HomeMobile({ about, projects, resume, contact }) {
         <Flex
             direction={"column"}
             justify={"space-between"}
-            h={"100vh"}
+            h={"95vh"}
             mb="20vh"
             p="20px 20px 20px 20px"
         >
