@@ -107,8 +107,14 @@ function ProjectsMobile() {
             gap={"50px"}
         >
             <Box
+                pt="20px"
                 pb="10px"
-                style={{ borderBottom: "1px solid var(--mantine-color-black)" }}
+                style={{
+                    borderBottom: "1px solid var(--mantine-color-black)",
+                    backgroundColor: "var(--mantine-color-white)",
+                }}
+                pos={"sticky"}
+                top={"0"}
             >
                 <Text>03</Text>
                 <AnimatedTitle
