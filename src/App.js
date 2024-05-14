@@ -27,7 +27,7 @@ function App() {
     });
 
     const isMobile = useMediaQuery("(max-width: 1020px)");
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     const home = useRef(null);
     const about = useRef(null);
