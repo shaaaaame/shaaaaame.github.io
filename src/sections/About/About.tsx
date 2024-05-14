@@ -17,9 +17,9 @@ export default function About() {
             h="150vh"
             style={{
                 color: "var(--mantine-color-white)",
+                backgroundColor: "var(--mantine-color-black)",
             }}
             p="20px 70px 20px 70px"
-            m="30vh 0 25vh 0"
         >
             <Grid.Col span={8}>
                 <Grid

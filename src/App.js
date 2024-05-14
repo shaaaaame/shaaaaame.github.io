@@ -6,7 +6,6 @@ import Projects from "./sections/Projects/Projects.tsx";
 import Resume from "./sections/Resume/Resume.tsx";
 import Contact from "./sections/Contact/Contact.tsx";
 import { useRef } from "react";
-import AboutTransition from "./sections/About/AboutTransition.tsx";
 import HomeMobile from "./sections/Home/HomeMobile.tsx";
 import { useMediaQuery } from "@mantine/hooks";
 import AboutMobile from "./sections/About/AboutMobile.tsx";
@@ -43,7 +42,15 @@ function App() {
     return (
         <MantineProvider theme={theme}>
             <div className="main">
-                <div ref={home} style={{ zIndex: 100, ...sticky }}>
+                <div
+                    ref={home}
+                    style={{
+                        zIndex: 100,
+                        position: "sticky",
+                        top: 0,
+                        ...sticky,
+                    }}
+                >
                     {isMobile ? (
                         <HomeMobile
                             about={about}
@@ -60,17 +67,12 @@ function App() {
                         />
                     )}
                 </div>
-                {!isMobile && (
-                    <div style={{ zIndex: 101, position: "relative" }}>
-                        <AboutTransition />
-                    </div>
-                )}
-
                 <div
                     ref={about}
                     style={{
                         zIndex: 102,
-                        position: "relative",
+                        position: "sticky",
+                        top: "0",
                         ...sticky,
                     }}
                 >

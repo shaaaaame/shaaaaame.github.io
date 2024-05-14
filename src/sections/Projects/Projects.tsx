@@ -13,7 +13,14 @@ export default function Projects() {
     return (
         <>
             <ProjectsHeader />
-            <Grid gutter={gutter} columns={8} m="150px 70px 20px 70px">
+            <Grid
+                gutter={gutter}
+                columns={8}
+                p="150px 70px 20px 70px"
+                style={{
+                    backgroundColor: "var(--mantine-color-white)",
+                }}
+            >
                 <Grid.Col span={8}>
                     <Flex direction="column" gap={"30vh"}>
                         <ProjectCard
