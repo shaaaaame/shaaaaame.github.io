@@ -5,13 +5,15 @@ import About from "./sections/About/About.tsx";
 import Projects from "./sections/Projects/Projects.tsx";
 import Resume from "./sections/Resume/Resume.tsx";
 import Contact from "./sections/Contact/Contact.tsx";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import HomeMobile from "./sections/Home/HomeMobile.tsx";
 import { useMediaQuery } from "@mantine/hooks";
 import AboutMobile from "./sections/About/AboutMobile.tsx";
 import ProjectsMobile from "./sections/Projects/ProjectsMobile.tsx";
 import ResumeMobile from "./sections/Resume/ResumeMobile.tsx";
 import ContactMobile from "./sections/Contact/ContactMobile.tsx";
+import Loading from "./sections/components/Loading.tsx";
+import { AnimatePresence, motion } from "framer-motion";
 function App() {
     const theme = createTheme({
         fontFamily: "Inter, sans-serif",
@@ -25,6 +27,7 @@ function App() {
     });
 
     const isMobile = useMediaQuery("(max-width: 1020px)");
+    const [loading, setLoading] = useState(false);
 
     const home = useRef(null);
     const about = useRef(null);
@@ -39,8 +42,34 @@ function App() {
           }
         : {};
 
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+        }, 2000);
+    }, []);
+
     return (
         <MantineProvider theme={theme}>
+            <AnimatePresence>
+                {loading && (
+                    <motion.div
+                        style={{
+                            width: "100vw",
+                            height: "100vh",
+                            zIndex: 200,
+                            position: "absolute",
+                        }}
+                        exit={{ opacity: 0 }}
+                        transition={{
+                            ease: "easeOut",
+                            duration: 0.2,
+                        }}
+                    >
+                        {loading && <Loading />}
+                    </motion.div>
+                )}
+            </AnimatePresence>
             <div className="main">
                 <div
                     ref={home}
