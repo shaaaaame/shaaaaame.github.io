@@ -8,8 +8,8 @@ function Loading() {
             style={{
                 backgroundColor: "var(--mantine-color-black)",
             }}
-            w="100vw"
-            h="100vh"
+            w="100%"
+            h="100%"
             justify={"center"}
             align={"center"}
         >

@@ -55,8 +55,8 @@ function App() {
                 {loading && (
                     <motion.div
                         style={{
-                            width: "100vw",
-                            height: "100vh",
+                            width: "100%",
+                            height: "100%",
                             zIndex: 200,
                             position: "absolute",
                         }}
