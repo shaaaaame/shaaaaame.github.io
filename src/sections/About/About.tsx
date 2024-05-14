@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Grid, Text } from "@mantine/core";
+import { Box, Container, Flex, Grid, Image, Text } from "@mantine/core";
 import "@mantine/core/styles.css";
 
 import React from "react";
@@ -105,12 +105,16 @@ export default function About() {
             </Grid.Col>
             <Grid.Col span={5} m="5vh 0 5vh 0" h="80vh" pos={"relative"}>
                 <Flex
+                    w={"100%"}
+                    h="100%"
+                    justify={"center"}
+                    align={"center"}
                     style={{
                         border: "1px solid var(--mantine-color-white)",
                     }}
-                    w="100%"
-                    h="100%"
-                ></Flex>
+                >
+                    <Image src={"cat.png"} alt="me" w="70%" h={"70%"} />
+                </Flex>
             </Grid.Col>
             <Grid.Col span={8} mb="5vh">
                 <Box
