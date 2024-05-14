@@ -62,15 +62,26 @@ function App() {
                         }}
                         exit={{ opacity: 0 }}
                         transition={{
-                            ease: "easeOut",
-                            duration: 0.2,
+                            ease: "easeIn",
+                            duration: 0.4,
                         }}
                     >
                         {loading && <Loading />}
                     </motion.div>
                 )}
             </AnimatePresence>
-            <div className="main">
+            <div
+                className="main"
+                style={
+                    loading
+                        ? {
+                              display: "none",
+                          }
+                        : {
+                              display: "contents",
+                          }
+                }
+            >
                 <div
                     ref={home}
                     style={{
