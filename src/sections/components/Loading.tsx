@@ -6,7 +6,7 @@ function Loading() {
     return (
         <Flex
             style={{
-                backgroundColor: "var(--mantine-color-black)",
+                backgroundColor: "var(--mantine-color-white)",
             }}
             w="100%"
             h="100%"
@@ -15,7 +15,7 @@ function Loading() {
         >
             <motion.div
                 style={{
-                    backgroundColor: "var(--mantine-color-white)",
+                    backgroundColor: "var(--mantine-color-black)",
                     width: "30px",
                     height: "30px",
                 }}

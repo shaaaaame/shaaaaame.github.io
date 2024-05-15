@@ -1,5 +1,5 @@
 import React from "react";
-import { Flex, Box, Text, Grid } from "@mantine/core";
+import { Flex, Box, Text, Grid, Image } from "@mantine/core";
 import AnimatedTitle from "../components/AnimatedTitle.tsx";
 
 function AboutMobile() {
@@ -24,11 +24,15 @@ function AboutMobile() {
                     title={"ABOUT"}
                 />{" "}
             </Box>
-            <Box
+            <Flex
                 w="100%"
                 h="50vh"
                 style={{ border: "1px solid var(--mantine-color-white)" }}
-            ></Box>
+                justify={"center"}
+                align={"center"}
+            >
+                <Image src="cat.png" alt="me" />
+            </Flex>
             <Flex w="100%" direction={"column"} gap={"30px"}>
                 <Grid
                     columns={4}

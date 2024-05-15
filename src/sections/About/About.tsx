@@ -103,16 +103,16 @@ export default function About() {
                     </Grid.Col>
                 </Grid>
             </Grid.Col>
-            <Grid.Col span={5} m="5vh 0 5vh 0" h="80vh" pos={"relative"}>
-                <Flex
-                    w={"100%"}
-                    h="100%"
-                    justify={"center"}
-                    align={"center"}
-                    style={{
-                        border: "1px solid var(--mantine-color-white)",
-                    }}
-                >
+            <Grid.Col
+                span={5}
+                m="5vh 0 5vh 0"
+                h="80vh"
+                pos={"relative"}
+                style={{
+                    border: "1px solid var(--mantine-color-white)",
+                }}
+            >
+                <Flex w={"100%"} h="100%" justify={"center"} align={"center"}>
                     <Image src={"cat.png"} alt="me" w="70%" h={"70%"} />
                 </Flex>
             </Grid.Col>
