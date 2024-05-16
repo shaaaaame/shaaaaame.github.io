@@ -35,7 +35,7 @@ export default function Projects() {
                                 github: "",
                             }}
                             tags={["UI/UX", "FRONTEND", "BACKEND"]}
-                            src="glam.png"
+                            src="glam2.png"
                         />
                         <ProjectCard
                             title="SUBHUB"

@@ -150,7 +150,7 @@ function ProjectsMobile() {
                     github: "https://github.com/markestiller/SubHub",
                 }}
                 tags={["UI/UX", "FRONTEND"]}
-                src="subhub2.png"
+                src="subhub.png"
             />
         </Flex>
     );
