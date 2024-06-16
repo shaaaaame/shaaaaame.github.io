@@ -116,7 +116,7 @@ function ProjectsMobile() {
                 pos={"sticky"}
                 top={"0"}
             >
-                <Text>03</Text>
+                <Text>02</Text>
                 <AnimatedTitle
                     fontSize={"50px"}
                     lineHeight={"50px"}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { Grid, Flex, Box, Text } from "@mantine/core";
 import { useInView, motion } from "framer-motion";
@@ -9,13 +9,13 @@ const gutter = {
 };
 
 function Header() {
-    const ref = React.useRef(null);
+    const ref = useRef(null);
     const isInView = useInView(ref, { amount: "all" });
     const isMobile = useMediaQuery("(max-width: 1020px)");
 
     return (
         <Grid gutter={gutter} columns={isMobile ? 4 : 8} ref={ref}>
-            <Grid.Col span={isMobile ? 2 : 3}>
+            <Grid.Col span={isMobile ? 2 : 6}>
                 <Flex gap={"10px"}>
                     <Box
                         w="1em"
