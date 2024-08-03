@@ -65,7 +65,7 @@ export default function Resume() {
             <Grid.Col span={5} h={"70vh"}>
                 <iframe
                     title="resume"
-                    src="https://drive.google.com/file/d/1SHlucV-bQiPmbbNnPdTgpcee5ctH-5e4/preview"
+                    src="https://drive.google.com/file/d/1YfoV3It24sYiS3Lo4Lbp2jHuWybY3Q5f/preview"
                     width={"100%"}
                     height={"100%"}
                     style={{ border: "1px solid var(--mantine-color-white)" }}
