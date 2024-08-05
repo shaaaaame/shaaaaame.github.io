@@ -1,3 +1,10 @@
+* {
+}
+/*
+::-webkit-scrollbar {
+    width: 0;
+} */
+
 .main {
     --clr-dark: "#534F46";
     --clr-light: "#E8F7FE";
@@ -5,6 +12,10 @@
 
 .mantine-Grid-col {
     padding: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 body {

@@ -107,13 +107,22 @@ export default function About() {
                 span={5}
                 m="5vh 0 5vh 0"
                 h="80vh"
+                p={0}
                 pos={"relative"}
                 style={{
                     border: "1px solid var(--mantine-color-white)",
                 }}
             >
-                <Flex w={"100%"} h="100%" justify={"center"} align={"center"}>
-                    <Image src={"cat.png"} alt="me" w="70%" h={"70%"} />
+                <Flex
+                    w={"100%"}
+                    h="100%"
+                    justify={"center"}
+                    align={"center"}
+                    style={{
+                        overflow: "hidden",
+                    }}
+                >
+                    <Image src={"cat.png"} alt="me" />
                 </Flex>
             </Grid.Col>
             <Grid.Col span={8} mb="5vh">

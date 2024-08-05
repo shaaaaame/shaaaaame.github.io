@@ -27,11 +27,18 @@ function AboutMobile() {
             <Flex
                 w="100%"
                 h="50vh"
-                style={{ border: "1px solid var(--mantine-color-white)" }}
+                style={{
+                    border: "1px solid var(--mantine-color-white)",
+                    overflow: "hidden",
+                }}
                 justify={"center"}
                 align={"center"}
             >
-                <Image src="cat.png" alt="me" />
+                <Image
+                    src="cat.png"
+                    alt="me"
+                    style={{ filter: "grayscale(100%)" }}
+                />
             </Flex>
             <Flex w="100%" direction={"column"} gap={"30px"}>
                 <Grid
