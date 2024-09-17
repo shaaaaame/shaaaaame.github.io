@@ -30,7 +30,7 @@ function ResumeMobile() {
             >
                 <iframe
                     title="resume"
-                    src="https://drive.google.com/file/d/1YfoV3It24sYiS3Lo4Lbp2jHuWybY3Q5f/preview"
+                    src="https://drive.google.com/file/d/11cX_KEUnLHjfXrXK-AK5Pff02GVSXLe1/preview"
                     width={"100%"}
                     height={"100%"}
                     style={{ border: "1px solid var(--mantine-color-white)" }}
