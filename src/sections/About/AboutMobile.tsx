@@ -37,7 +37,6 @@ function AboutMobile() {
                 <Image
                     src="cat.png"
                     alt="me"
-                    style={{ filter: "grayscale(100%)" }}
                 />
             </Flex>
             <Flex w="100%" direction={"column"} gap={"30px"}>
