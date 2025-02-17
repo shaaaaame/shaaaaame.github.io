@@ -94,6 +94,7 @@ function ProjectCard({ title, details, tags, links, src }) {
                     style={{
                         border: "1px solid var(--mantine-color-black)",
                         overflow: "hidden",
+
                     }}
                     h="100%"
                 >

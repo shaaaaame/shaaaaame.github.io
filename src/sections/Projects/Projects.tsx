@@ -41,7 +41,7 @@ export default function Projects() {
                             title="SUBHUB"
                             details={{
                                 type: "fullstack web application",
-                                stack: "react, django, typescript, python",
+                                stack: "react, chakra, express, typescript",
                                 date: "march 2024",
                             }}
                             links={{
@@ -50,6 +50,20 @@ export default function Projects() {
                             }}
                             tags={["UI/UX", "FRONTEND"]}
                             src="subhub2.png"
+                        />
+                        <ProjectCard
+                            title="HYDRANT"
+                            details={{
+                                type: "fullstack web application",
+                                stack: "aws, react, shadcn, nest, typescript",
+                                date: "jan 2025",
+                            }}
+                            links={{
+                                web: "https://hydrantinc.co",
+                                github: "https://github.com/shaaaaame/hydrant",
+                            }}
+                            tags={["UI/UX", "FRONTEND", "BACKEND", "ML"]}
+                            src="hydrant.png"
                         />
                     </Flex>
                 </Grid.Col>
