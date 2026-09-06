@@ -4,6 +4,8 @@ import "@mantine/core/styles.css";
 import React from "react";
 import AnimatedTitle from "../components/AnimatedTitle.tsx";
 
+export const ID = "1sprGtQOvT0JmbfC9iRpFBNlVa4uvOJOg"
+
 export default function Resume() {
     const gutter = {
         base: "20px",
@@ -49,7 +51,7 @@ export default function Resume() {
                         portfolio
                     </Grid.Col>
                     <Grid.Col span={1} style={{ lineHeight: "1em" }}>
-                        2024
+                        2026
                     </Grid.Col>
                 </Grid>
             </Grid.Col>
@@ -65,7 +67,7 @@ export default function Resume() {
             <Grid.Col span={5} h={"70vh"}>
                 <iframe
                     title="resume"
-                    src="https://drive.google.com/file/d/1hkSqir2mIEmYr8VrpZ3QpcAWs8svDtDa/preview"
+                    src={`https://drive.google.com/file/d/${ID}/preview`}
                     width={"100%"}
                     height={"100%"}
                     style={{ border: "1px solid var(--mantine-color-white)" }}

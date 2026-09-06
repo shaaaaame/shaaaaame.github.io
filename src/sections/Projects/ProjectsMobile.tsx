@@ -152,6 +152,20 @@ function ProjectsMobile() {
                 tags={["UI/UX", "FRONTEND"]}
                 src="subhub.png"
             />
+            <ProjectMobileCard
+                title="HYDRANT"
+                details={{
+                    type: "fullstack web application",
+                    stack: "aws, react, shadcn, nest, typescript",
+                    date: "jan 2025",
+                }}
+                links={{
+                    web: "https://hydrantinc.co",
+                    github: "https://github.com/shaaaaame/hydrant",
+                }}
+                tags={["UI/UX", "FRONTEND", "BACKEND", "ML"]}
+                src="hydrant.png"
+            />
         </Flex>
     );
 }

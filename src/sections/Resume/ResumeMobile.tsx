@@ -1,6 +1,9 @@
 import React from "react";
 import { Flex, Box, Text, Grid } from "@mantine/core";
 import AnimatedTitle from "../components/AnimatedTitle.tsx";
+import { ID } from "./Resume.tsx";
+
+
 function ResumeMobile() {
     return (
         <Flex
@@ -30,7 +33,7 @@ function ResumeMobile() {
             >
                 <iframe
                     title="resume"
-                    src="https://drive.google.com/file/d/1hkSqir2mIEmYr8VrpZ3QpcAWs8svDtDa/preview"
+                    src={`https://drive.google.com/file/d/${ID}/preview`}
                     width={"100%"}
                     height={"100%"}
                     style={{ border: "1px solid var(--mantine-color-white)" }}
