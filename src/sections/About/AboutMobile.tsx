@@ -35,7 +35,7 @@ function AboutMobile() {
                 align={"center"}
             >
                 <Image
-                    src="cat.png"
+                    src="cat.jpg"
                     alt="me"
                 />
             </Flex>

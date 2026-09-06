@@ -3,7 +3,7 @@ import "@mantine/core/styles.css";
 
 import React from "react";
 
-const AboutHeader = () => {};
+const AboutHeader = () => { };
 
 export default function About() {
     const gutter = {
@@ -50,7 +50,7 @@ export default function About() {
                         portfolio
                     </Grid.Col>
                     <Grid.Col span={1} style={{ lineHeight: "1em" }}>
-                        2024
+                        2026
                     </Grid.Col>
                 </Grid>
             </Grid.Col>
@@ -122,7 +122,7 @@ export default function About() {
                         overflow: "hidden",
                     }}
                 >
-                    <Image src={"cat.png"} alt="me" />
+                    <Image src={"cat.jpg"} alt="me" />
                 </Flex>
             </Grid.Col>
             <Grid.Col span={8} mb="5vh">

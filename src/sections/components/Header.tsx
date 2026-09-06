@@ -32,7 +32,7 @@ function Header() {
                 portfolio
             </Grid.Col>
             <Grid.Col span={1} style={{ lineHeight: "1em" }}>
-                2024
+                2026
             </Grid.Col>
             <Grid.Col span={isMobile ? 4 : 8} pb={0}>
                 <motion.div
