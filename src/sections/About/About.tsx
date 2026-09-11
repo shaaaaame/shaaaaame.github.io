@@ -113,16 +113,18 @@ export default function About() {
                     border: "1px solid var(--mantine-color-white)",
                 }}
             >
-                <Box
+                <Flex
                     w={"100%"}
                     h="100%"
                     style={{
                         overflow: "hidden",
                     }}
                     pos="relative"
+                    justify={"center"}
+                    align={"center"}
                 >
-                    <Image src="cat.jpg" alt="me" pos="absolute" top="-30%" />
-                </Box>
+                    <Image src="cat.jpg" alt="me" pos="absolute" />
+                </Flex>
             </Grid.Col>
             <Grid.Col span={8} mb="5vh">
                 <Box

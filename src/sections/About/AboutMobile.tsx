@@ -24,22 +24,24 @@ function AboutMobile() {
                     title={"ABOUT"}
                 />{" "}
             </Box>
-            <Box
+            <Flex
                 w="100%"
                 h="50vh"
                 style={{
                     border: "1px solid var(--mantine-color-white)",
                     overflow: "hidden",
                 }}
-                pos="relative"
+                content="center"
+                align={"center"}
+                pos={"relative"}
             >
                 <Image
+                    w="100%"
                     src="cat.jpg"
                     alt="me"
                     pos="absolute"
-                    top="-30%"
                 />
-            </Box>
+            </Flex>
             <Flex w="100%" direction={"column"} gap={"30px"}>
                 <Grid
                     columns={4}
