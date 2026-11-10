@@ -4,7 +4,7 @@ import "@mantine/core/styles.css";
 import React from "react";
 import AnimatedTitle from "../components/AnimatedTitle.tsx";
 
-export const ID = "1sprGtQOvT0JmbfC9iRpFBNlVa4uvOJOg"
+export const ID = "1TiSDOmQuX2-L8aq_sO-wYXB0vj5TzHKN"
 
 export default function Resume() {
     const gutter = {
